@@ -1,7 +1,7 @@
 # sveltekit-sqlite
 A minimal pastebin-like SvelteKit example app that uses a local SQLite database via the Prisma ORM through a SvelteKit endpoint.
 
-### Deploying this project to Vercel or similar will not work due to the fact that the instances serving the project are ephemeral. When more instances are spun up to accommodate for increased load, they will not share the same filesystem, ahd hence will not share the same database.
+### Deploying this project to Vercel or similar will not work due to the fact that the instances serving the project are ephemeral. When more instances are spun up to accommodate for increased load, they will not share the same filesystem, and hence will not share the same database.
 
 The database and its required files are included in this repository for demonstration purposes, though it is empty.
 
