@@ -1,38 +1,21 @@
-# create-svelte
+# sveltekit-sqlite
+A minimal pastebin-like SvelteKit example app that uses a local SQLite database via the Prisma ORM through a SvelteKit endpoint.
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+The database and its required files are included in this repository for demonstration purposes, though it is empty.
 
-## Creating a project
+To generate it from scratch;
+* Make sure you have everything installed; run `pnpm install`
+* Delete everything inside `/prisma` except for `/prisma/schema.prisma`.
+* Run `pnpx prisma migrate dev --name init`.
+* Run `pnpx prisma generate`.
 
-If you're seeing this, you've probably already done this step. Congrats!
+I'm using `pnpx` here, which is `pnpm`'s equivalent to `npm`'s `npx`.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+### Index page
+![image](https://user-images.githubusercontent.com/59726149/183265859-ee94814e-f167-41db-8f63-474f488aee0a.png)
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+### Inputting text into the fields
+![image](https://user-images.githubusercontent.com/59726149/183265921-cd8d7ed7-82ff-498c-883f-706812ecbcea.png)
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+### The generated post, located at `/:title` (this page would be at `/Doggo ipsum`)
+![image](https://user-images.githubusercontent.com/59726149/183265886-fa1cee19-a993-47e9-9f60-32691db61b31.png)
